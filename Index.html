@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css" />
+    <title>Document</title>
+  </head>
+  <body onload='document.form.text.focus()'>
+    <div class="container">
+     <div> <button class="open-button" onclick="openForm()">Add User</button></div>
+     <div>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>ID</th>
+              <th>City</th>
+              <th>Degree</th>
+              <th>Timestamp</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <div class="form-popup" id="myForm">
+        <form name="form"
+          onsubmit="return submitted()"
+          class="form-container"
+          id="submitForm"
+          autocomplete="off"
+        >
+        <input autocomplete="false" name="hidden" type="text" style="display:none;">
+          <label for="name"><b>Name:</b></label>
+          <input type="text" autocomplete=”off” onkeypress="return lettersValidate(event)" name="text"  maxlength="12" id="name" placeholder="Enter Name (accepts only letters) " required />
+
+          <label for="city"><b>Choose a City:</b></label>
+
+          <select name="city" id="city">
+            <option value="Begaluru">Begaluru</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option></select
+          ><br />
+          <label for="degree"><b>Degree:</b></label>
+          <input type="text" autocomplete=”off” minlength="3" maxlength="12" onkeypress="return lettersValidate(event)" name="text"id="degree" placeholder="Enter Degree (accepts only letters)" required />
+          <button type="submit" value="submit" id="final" class="btn">Submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </form>
+      </div>
+     
+    </div>
+    <script src="Script.js"></script>
+  </body>
+</html>
