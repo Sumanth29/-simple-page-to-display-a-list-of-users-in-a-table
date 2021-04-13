@@ -81,6 +81,9 @@ body {
 .open-button:hover {
   opacity: 1;
 }
+#del-btn{
+  width:50px;
+}
 .content-table {
   border-collapse: collapse;
   margin: 25px 0;
