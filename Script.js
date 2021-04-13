@@ -44,7 +44,7 @@ function submitted() {
                     <td>${city}</td>
                     <td>${degree}</td>
                     <td>${time}</td>
-                    <td><button class="open-button" onclick="delFunction(this)">Delete User</button><td>
+                    <td><button id="del-btn" class="open-button" onclick="delFunction(this)">X</button><td>
                 </tr>
             </tbody>`;
   table.innerHTML += template;
