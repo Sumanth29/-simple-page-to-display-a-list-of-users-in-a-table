@@ -32,7 +32,7 @@
         >
         <input autocomplete="false" name="hidden" type="text" style="display:none;">
           <label for="name"><b>Name:</b></label>
-          <input type="text" autocomplete=”off” onkeypress="return lettersValidate(event)" name="text"  maxlength="12" id="name" placeholder="Enter Name (accepts only letters) " required />
+          <input type="text" autocomplete=”off” onkeypress="return lettersValidate(event)" name="text"  maxlength="30" id="name" placeholder="Enter Name (accepts only letters) " required />
 
           <label for="city"><b>Choose a City:</b></label>
 
@@ -43,7 +43,7 @@
             <option value="Mumbai">Mumbai</option></select
           ><br />
           <label for="degree"><b>Degree:</b></label>
-          <input type="text" autocomplete=”off” minlength="3" maxlength="12" onkeypress="return lettersValidate(event)" name="text"id="degree" placeholder="Enter Degree (accepts only letters)" required />
+          <input type="text" autocomplete=”off” minlength="3" maxlength="30" onkeypress="return lettersValidate(event)" name="text"id="degree" placeholder="Enter Degree (accepts only letters)" required />
           <button type="submit" value="submit" id="final" class="btn">Submit</button>
           <button type="button" class="btn cancel" onclick="closeForm()">
             Close
