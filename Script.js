@@ -11,19 +11,10 @@ function lettersValidate(key) {
     }
          
 }
-function lettersValidate1(key) {
-    var keycode = (key.which) ? key.which : key.keyCode;
+function delFunction(element) {
+    document.getElementById("content-table").deleteRow(element.parentNode.parentNode.rowIndex);
+  }
 
-    if ((keycode > 64 && keycode < 91) || (keycode > 96 && keycode < 123) || (keycode==189))  
-    {     
-           return true;    
-    }
-    else
-    {
-        return false;
-    }
-         
-}
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
@@ -53,6 +44,7 @@ function submitted() {
                     <td>${city}</td>
                     <td>${degree}</td>
                     <td>${time}</td>
+                    <td><button class="open-button" onclick="delFunction(this)">Delete User</button><td>
                 </tr>
             </tbody>`;
   table.innerHTML += template;
